@@ -1654,3 +1654,27 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.btn-whatsapp {
+  position: fixed;
+  z-index: 2;
+  bottom: 70px;
+  right: 8px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp img {
+  width: 35px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
