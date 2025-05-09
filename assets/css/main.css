@@ -1052,7 +1052,7 @@ section,
 
 .stats:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1080,7 +1080,7 @@ section,
   margin: 0;
   font-size: 16px;
   font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 /*--------------------------------------------------------------
