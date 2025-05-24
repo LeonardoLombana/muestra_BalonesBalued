@@ -174,3 +174,30 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+      // Manejar clicks en todos los enlaces de tabs
+      document.querySelectorAll('[data-tab-target]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetTabId = this.getAttribute('data-tab-target');
+          const menuSection = document.getElementById('menu');
+          
+          // Scroll a la sección de productos
+          if (menuSection) {
+            menuSection.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          // Activar el tab correspondiente después del scroll
+          setTimeout(() => {
+            const tabTrigger = document.querySelector(`[data-bs-target="#${targetTabId}"]`);
+            if (tabTrigger) {
+              const tab = new bootstrap.Tab(tabTrigger);
+              tab.show();
+            }
+          }, 350);
+        });
+      });
+    });
